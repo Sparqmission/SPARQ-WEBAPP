@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#ffffff"/>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>Disciple Nations</title>
+</head>
+<body>
+  <main>
+    <h1 data-i18n="headline">BEGIN MAKING AND MULTIPLYING DISCIPLES.</h1>
+    <label for="language-select" data-i18n="select_language">Choose Language:</label>
+    <select id="language-select">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="ar">العربية</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+    <form id="contact-form">
+      <input type="email" id="email" placeholder="Enter your email" required />
+      <button type="submit" data-i18n="submit">Submit</button>
+    </form>
+    <p id="success-message" style="display:none;" data-i18n="thank_you">Thank you for connecting!</p>
+  </main>
+
+  <script src="https://unpkg.com/i18next@23.4.6/i18next.min.js"></script>
+  <script src="https://unpkg.com/i18next-http-backend@2.2.0/i18nextHttpBackend.min.js"></script>
+  <script src="app.js"></script>
+  <script src="form.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
+
